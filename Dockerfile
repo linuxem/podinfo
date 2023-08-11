@@ -20,7 +20,7 @@ RUN GIT_COMMIT=$(git rev-list -1 HEAD) && \
     -X github.com/stefanprodan/podinfo/pkg/version.REVISION=${GIT_COMMIT}" \
     -a -o bin/podcli cmd/podcli/*
 
-FROM alpine:3.10
+FROM alpine:3.16.7
 
 RUN addgroup -S app \
     && adduser -S -g app app \
